@@ -21,11 +21,12 @@ int main(int ac, char *av[]) {
     }
 
     // -i 옵션 확인
+    // av = { ac , -i , soure , destination }
     if (ac == 4 && strcmp(av[1], "-i") == 0) {
         mode = 1;
         source = av[2];
         destination = av[3];
-    } else {
+    } else { // av = { ac , source , destination }
         source = av[1];
         destination = av[2];
     }
@@ -40,17 +41,8 @@ int main(int ac, char *av[]) {
     if ((in_fd = open(source, O_RDONLY)) == -1)
         oops("Cannot open", source);
 
-    // -i 옵션이 있는 경우 
-    // if (mode == 1 && access(destination, F_OK) == 0) {
-    //     char type;
-    //     printf("%s: '%s'를 덮어쓸까요 (y/n)? ", av[0], destination);
-    //     scanf(" %c", &type);
-    //     if (type != 'y') {
-    //         close(in_fd);
-    //         return 0;  // 사용자 취소 시 종료
-    //     }
-    // }
-    if (mode == 1 && strcmp(source, destination) == 0) {
+    //-i 옵션이 있는 경우 
+    if (mode == 1 && access(destination, F_OK) == 0 ) {  
         char type;
         printf("%s: '%s'를 덮어쓸까요 (y/n)? ", av[0], destination);
         scanf(" %c", &type);
