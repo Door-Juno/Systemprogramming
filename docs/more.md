@@ -1,11 +1,11 @@
 # `more.c` 구현하기
 ### 1. what does mre do ?
 * it displays a file one screenful at a time
-![more](../assets/more_1.png)
+![more](../assets/more/more_1.png)
 
 * logic
 
-![morelogic](../assets/more_2.png)
+![morelogic](../assets/more/more_2.png)
 
 ### 2. implement
 ``` c
@@ -197,7 +197,7 @@ int see_more(FILE *cmd) {
     return 0;
 }
 ```
-![more_using_pipeline](../assets/more_3.png)
+![more_using_pipeline](../assets/more/more_3.png)
 
 ### 4. 파이프라인을 사용하는 이유
 1. 프로세스 간 데이터를 전달 할 수 있다.

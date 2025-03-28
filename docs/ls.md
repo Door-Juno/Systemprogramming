@@ -4,13 +4,13 @@
 $ ls
 ```
 
-![ls_1](../assets/ls_1.png)
+![ls_1](../assets/ls/ls_1.png)
 
 ``` bash
 $ ls -l
 ```
 
-![ls-l](../assets/ls_2.png)
+![ls-l](../assets/ls/ls_2.png)
 
 순서대로 permission, owner, group, size, modtime, name 필드이다.
 
@@ -19,7 +19,7 @@ $ ls -l
   * Displays information about files.
 * Logic
 
-![ls_logic](../assets/ls_3.png)
+![ls_logic](../assets/ls/ls_3.png)
 
 ### 2. How do i read a directory ?
 ``` c
@@ -79,7 +79,7 @@ void do_ls( char dirname[] ) {
 ```
 출력 결과
 
-![ls1.c](../assets/ls_4.png)
+![ls1.c](../assets/ls/ls_4.png)
 
 * 해결해야 할 문제들
     * Not Sorted -> Use `qsort` to sort the array
@@ -89,7 +89,7 @@ void do_ls( char dirname[] ) {
 
 ### 4. What Does `ls -l` Do ?
 
-![ls-l_do](../assets/ls_5.png)
+![ls-l_do](../assets/ls/ls_5.png)
 
 ### 5. `stat` call gets file information
 * How can we get information (status/properties) about a file ?
@@ -103,7 +103,7 @@ stat(name,ptr);
 
 * Members of struct stat :
 
-![struct_stat](../assets/ls_6.png)
+![struct_stat](../assets/ls/ls_6.png)
 
 ### 6. ex - fileinfo.c 
 ``` c
@@ -141,24 +141,24 @@ void show_stat_info(char *fname, struct stat *buf) {
 ```
 출력 결과
 
-![fileinfo](../assets/fileinfo_1.png)
+![fileinfo](../assets/ls/fileinfo_1.png)
 
 * Mod time -> Use `ctime()` to convert
 * Owner, group, permssion -> Use bitwise
 
 ### 7. Converting File `Mode` to a String
 
-![converting_string](../assets/fileinfo_2.png)
+![converting_string](../assets/ls/fileinfo_2.png)
 
 * 기본적으로, `mode`의 숫자는 16bit 8진수이다.
     * 100664 = 1 / 000 / 000 / 110 / 110 / 100
     * -rw-rw-r--
 
-![bitwise](../assets/fileinfo_3.png)
+![bitwise](../assets/ls/fileinfo_3.png)
 
 * Mask와 값을 직접 비교하여 우리가 원하는 부위만 직접 값을 추출가능하다.
 
-![mask](../assets/fileinfo_4.png)
+![mask](../assets/ls/fileinfo_4.png)
 
 * 이제, mask를 활용하여 `mode`를 String으로 변환해보자.
 ``` c
@@ -338,4 +338,4 @@ char *gid_to_name(gid_t gid) {
 ```
 출력 결과
 
-![ls2.c](../assets/ls_7.png)
+![ls2.c](../assets/ls/ls_7.png)

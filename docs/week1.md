@@ -18,13 +18,13 @@
 ``` bash
 $ ls dirname # 해당 디렉토리에 파일들을 나열한다.
 ```
-![ls](../assets/1_1.png)
+![ls](../assets/week1/1_1.png)
 
 `cd` : change to a different directory
 ``` bash
 $ cd dirname # 해당 디렉토리로 이동한다.
 ```
-![cd](../assets/1_2.png)
+![cd](../assets/week1/1_2.png)
 - `cd`를 통해 현 터미널의 주소를 다운로드로 옮긴 모습
 - 다운로드 directory에서 `ls`를 하자 다운로드 dir 하위 파일들이 보인다.
 
@@ -32,7 +32,7 @@ $ cd dirname # 해당 디렉토리로 이동한다.
 ``` bash
 $ pwd # 현 디렉토리의 경로를 표시한다
 ```
-![pwd](../assets/1_3.png)
+![pwd](../assets/week1/1_3.png)
 
 `mkdir` , `rmdir` : make and remove directories
 ``` bash
@@ -45,7 +45,7 @@ $ rmdir filename # filename의 디렉토리를 삭제한다
 ``` bash 
 $ cat filename # filename의 내용을 확인한다
 ```
-![cat](../assets/1_4.png)
+![cat](../assets/week1/1_4.png)
 
 `cp` : make a copy of a file
 ``` bash 

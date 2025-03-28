@@ -4,7 +4,7 @@
 ``` bash 
 $ who
 ```
-![who](../assets/who_1.png)
+![who](../assets/who/who_1.png)
 
 * what is TTY (Tele Type writer) ?
     * 표준 입력에 연결된 터미널의 파일 이름을 의미한다.
@@ -12,8 +12,8 @@ $ who
     * TTY0부터 TTY6까지 총 7개가 존재하며, 사용자는 총 7개 까지 콘솔 또는 터미널에 동시접근이 가능하다.
 
 * logic
-* 
-![who_logic](../assets/who_2.png)
+
+![who_logic](../assets/who/who_2.png)
     * Two tasks we need to program
       * Read structs from a file
       * Display the information stored in a struct
@@ -78,7 +78,7 @@ void show_info( struct utmp *utbufp )
 }
 ```
 출력결과
-![who_imp_result](../assets/who_3.png)
+![who_imp_result](../assets/who/who_3.png)
 
 * 개선 할 것   
     * Suppress blank records
@@ -179,6 +179,4 @@ void showtime( long timeval )
 ```
 출력결과
 
-![who2_result](../assets/who_4.png)
-
-### 4. implement with Buffering
+![who2_result](../assets/who/who_4.png)

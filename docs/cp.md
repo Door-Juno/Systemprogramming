@@ -34,7 +34,7 @@ n = write(fd,buffer,num);
 
 ### 3. implment
 * logic
-![cp_logic](../assets/cp_1.png)
+![cp_logic](../assets/cp/cp_1.png)
 
 ``` c
 // cp1.c
@@ -97,13 +97,13 @@ $ ./cp1 cp1 copy.of.cp1
 $ ls -l cp1 copy.of.cp1
 ```
 
-![cp1_ls](../assets/cp_2.png)
+![cp1_ls](../assets/cp/cp_2.png)
 
 ### 4. More Efficient File I/O : Buffering
 * Execution time for cp1
   * read(in_fd, buf, BUFFERSIZE);
 
-![cp_read_executiontime](../assets/cp_3.png)
+![cp_read_executiontime](../assets/cp/cp_3.png)
 -> 4096 byte 씩 읽을때부터 효율은 비슷해진다.
 
 * System call 을 사용하면 `Mode Change`가 발생하여 시간이 소모된다.. -> 시스템 콜 사용을 최소화 하여야한다.
